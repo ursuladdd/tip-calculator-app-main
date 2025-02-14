@@ -3,39 +3,64 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
   <title>Frontend Mentor | Tip calculator app</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
+<div class="logo_spli">
+  <img src="./images/logo.svg" alt="logo splitter">
+</div>
+    <div class="mother_container">
+      <div class="one_child">
+        <div class="inpt-bill">
+          <p>Bill</p>
+          <input type="number" name="" id="int-valor" placeholder="0" class="css_input">
+        </div>
 
-  Bill
+        <span class="select_tip" id="selc-tip">
+          <p>Select Tip %</p>
+          <input type="radio" name="" id="desc-5">
+          <label for="desc-5">5%</label>
 
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
+          <input type="radio" name="" id="desc-10">
+          <label for="desc-10">10%</label>
 
-  Number of People
+          <input type="radio" name="" id="desc-15">
+          <label for="desc-15">15%</label>
 
-  Tip Amount
-  / person
+          <input type="radio" name="" id="desc-25">
+          <label for="desc-25">25%</label>
 
-  Total
-  / person
+          <input type="radio" name="" id="desc-30">
+          <label for="desc-30">30%</label>
 
-  Reset
+          <input type="number" name="" id="int-custom" placeholder="Custom">
+        </span>
+        <div class="input_people">
+          <p>Number of People</p>
+          <input type="number" name="" id="int-quanti" placeholder="0" class="css_input">
+        </div>
+      </div>
+      <div class="two_child">
+        <div class="head_result">
+          <div class="info">
+            <h2>Tip Amount</h2>
+            <p>/ person</p>
+          </div>
+          <h3>$0.00</h3>
+        </div>
+        <div class="head_result">
+          <div class="info">
+            <h2>Total</h2>
+            <p>/ person</p>
+          </div>
+          <h3>$0.00</h3>
+        </div>
+        <button id="reset" class="button-reset">RESET</button>
+      </div>
+    </div>
   
+
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
