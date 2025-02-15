@@ -11,5 +11,35 @@
 }
 
 @media (max-width: 480px) {
-    
+    body {
+        min-height: 100vh;
+        gap: 15px;
+    }
+
+    .logo_spli img {
+        width: 100%;
+    }
+
+    .mother_container {
+        display: flex;
+        flex-direction: column;
+        border-radius: 20px;
+        padding: 30px;
+    }
+
+    .select_tip {
+        grid-template-columns: repeat(2, 129px);
+    }
+
+    .two_child {
+        border-radius: 15px;
+    }
+
+    .result_container {
+        gap: 20px;
+    }
+
+    button {
+        margin-top: 20px;
+    }
 }
