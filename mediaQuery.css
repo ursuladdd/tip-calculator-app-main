@@ -14,6 +14,7 @@
     body {
         min-height: 100vh;
         gap: 15px;
+        margin-top: 5%;
     }
 
     .logo_spli img {
@@ -27,8 +28,39 @@
         padding: 30px;
     }
 
+    .input-bill p {
+        color: var(--Dark-grayish-cyan);
+        font-size: 1rem;
+    }
+
+    .inpt-bill {
+        height: 45px;
+        background-size: 0.6rem;
+        background-position: 15px;
+        padding: 15px;
+    }
+
+    .desconto {
+        padding: 20px 0 15px 0;
+    }
+
+    .desconto p {
+        color: var(--Dark-grayish-cyan);
+        font-size: 1rem;
+    }
     .select_tip {
-        grid-template-columns: repeat(2, 129px);
+        grid-template-columns: repeat(2, 142px);
+        gap: 15px;
+    }
+
+    label {
+        padding: 10px 15px;
+        border-radius: 6px;
+        font-size: 1.4rem;
+    }
+
+    .custom_css {
+        font-size: 1.4rem;
     }
 
     .two_child {
@@ -37,6 +69,18 @@
 
     .result_container {
         gap: 20px;
+    }
+
+    .input_people p {
+        color: var(--Dark-grayish-cyan);
+        font-size: 1rem;
+    }
+
+    .css_input {
+        height: 45px;
+        background-size: 0.6rem;
+        background-position: 15px;
+        padding: 15px;
     }
 
     button {
