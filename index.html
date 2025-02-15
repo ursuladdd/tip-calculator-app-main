@@ -21,44 +21,44 @@
           <input type="number" name="" id="int-valor" placeholder="0" class="css_input">
         </div>
 
-        <span class="select_tip" id="selc-tip">
-          <p>Select Tip %</p>
-          <input type="radio" name="" id="desc-5">
-          <label for="desc-5">5%</label>
-
-          <input type="radio" name="" id="desc-10">
-          <label for="desc-10">10%</label>
-
-          <input type="radio" name="" id="desc-15">
-          <label for="desc-15">15%</label>
-
-          <input type="radio" name="" id="desc-25">
-          <label for="desc-25">25%</label>
-
-          <input type="radio" name="" id="desc-30">
-          <label for="desc-30">30%</label>
-
-          <input type="number" name="" id="int-custom" placeholder="Custom">
-        </span>
+        
+          <div class="desconto">
+            <p>Select Tip %</p>
+            <form class="select_tip" id="selc-tip">
+              <input type="radio" name="" id="desc-5">
+              <label for="desc-5">5%</label>
+              <input type="radio" name="" id="desc-10">
+              <label for="desc-10">10%</label>
+              <input type="radio" name="" id="desc-15">
+              <label for="desc-15">15%</label>
+              <input type="radio" name="" id="desc-25">
+              <label for="desc-25">25%</label>
+              <input type="radio" name="" id="desc-30">
+              <label for="desc-30">30%</label>
+              <input type="number" name="" id="int-custom" placeholder="Custom">
+            </form>
+          </div>
         <div class="input_people">
           <p>Number of People</p>
           <input type="number" name="" id="int-quanti" placeholder="0" class="css_input">
         </div>
       </div>
       <div class="two_child">
-        <div class="head_result">
-          <div class="info">
-            <h2>Tip Amount</h2>
-            <p>/ person</p>
+        <div class="result_container">
+          <div class="head_result">
+            <div class="info">
+              <h2>Tip Amount</h2>
+              <p>/ person</p>
+            </div>
+            <h3>$0.00</h3>
           </div>
-          <h3>$0.00</h3>
-        </div>
-        <div class="head_result">
-          <div class="info">
-            <h2>Total</h2>
-            <p>/ person</p>
+          <div class="head_result">
+            <div class="info">
+              <h2>Total</h2>
+              <p>/ person</p>
+            </div>
+            <h3>$0.00</h3>
           </div>
-          <h3>$0.00</h3>
         </div>
         <button id="reset" class="button-reset">RESET</button>
       </div>
