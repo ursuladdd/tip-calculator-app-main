@@ -72,6 +72,11 @@ body {
     font-family: var(--font);
     font-size: 1.4rem;
     font-weight: 600;
+    outline: none;
+}
+
+.inpt-bill:focus {
+    border: 2px solid var(--Strong-cyan);
 }
 
 .desconto {
@@ -105,6 +110,13 @@ label {
     font-size: 1.2rem;
     font-weight: 600;
     text-align: center;
+    cursor: pointer;
+}
+
+input[type="radio"]:checked + label{
+    background-color: var(--Strong-cyan);
+    color: black;
+    transition: 0.3s ease;
 }
 
 .custom_css {
@@ -115,8 +127,16 @@ label {
     font-size: 1.2rem;
     font-weight: 600;
     text-align: center;
+    color: var(--Very-dark-cyan);
+    outline: none;
 
 }
+
+
+.custom_css:focus {
+    border: 2px solid var(--Strong-cyan);
+}
+
 
 .custom_css::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; } 
 
@@ -145,6 +165,11 @@ label {
     font-family: var(--font);
     font-size: 1.4rem;
     font-weight: 600;
+    outline: none;
+}
+
+.css_input:focus {
+    border: 2px solid var(--Strong-cyan);
 }
 
 .two_child {
