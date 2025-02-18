@@ -98,11 +98,7 @@ body {
     gap: 15px 20px;
 }
 
-input[type="radio"] {
-    display: none;
-}
-
-label {
+.btn-desc {
     background-color: var(--Very-dark-cyan);
     padding: 4px 15px;
     border-radius: 3px;
@@ -113,10 +109,9 @@ label {
     cursor: pointer;
 }
 
-input[type="radio"]:checked + label{
+.btn-desc:active{
     background-color: var(--Strong-cyan);
     color: black;
-    transition: 0.3s ease;
 }
 
 .custom_css {
