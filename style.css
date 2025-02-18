@@ -230,5 +230,10 @@ button:active {
     background-color: var(--Strong-cyan);
 }
 
+.attribution {
+    font-family: var(--font);
+    font-weight: 600;
+    color: var(--Very-dark-cyan);
+}
 
 
