@@ -1,6 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
 let valorTotal = document.getElementById("int-valor");
 let quantidade = document.getElementById("int-quanti");
+let estilizacaoinput = document.getElementById("int-quanti");
+const mensagem = document.getElementById('erro');
 let botoesDesconto = document.querySelectorAll(".btn-desc");
 let personalizaCustom = document.getElementById("int-custom");
 const resetButton = document.getElementById("reset");
@@ -72,9 +74,13 @@ personalizaCustom.addEventListener("blur", (e) => {
         return;
     }
 
-    if (quantidade.value === "" || isNaN(quantidade.value)) {
-        quantidade.value = 1;
+    if (quantidade.value === "" || !(quantidade.value)) {
+        quantidade.value = 0;
+        estilizacaoinput.style.border = "2px solid #ff5263";
+        mensagem.textContent = "Can't be zero";
+
     }
+
 
     calcularDesconto(parseFloat(valorTotal.value), customPercent, parseInt(quantidade.value));
 });

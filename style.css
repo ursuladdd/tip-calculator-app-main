@@ -13,7 +13,7 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: content-box;
     unicode-bidi:normal;
 }
 
@@ -139,13 +139,22 @@ body {
 .input_people {
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 2px;
 }
 
 .input_people p {
     color: var(--Very-dark-cyan);
     font-weight: 600;
     font-size: 0.9rem;
+}
+
+#erro {
+    position: relative;
+    bottom: 4px;
+    left: 69.5%;
+    width: 100px;
+    color: #ff5263;
+    font-size: 0.7rem;
 }
 
 .css_input {

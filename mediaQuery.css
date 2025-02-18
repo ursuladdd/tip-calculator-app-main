@@ -34,7 +34,7 @@
     }
 
     .inpt-bill {
-        height: 45px;
+        height: 12px;
         background-size: 0.6rem;
         background-position: 15px;
         padding: 15px;
@@ -60,6 +60,7 @@
     }
 
     .custom_css {
+        height: 45px;
         font-size: 1.4rem;
     }
 
@@ -77,13 +78,13 @@
     }
 
     .css_input {
-        height: 45px;
+        height: 12px;
         background-size: 0.6rem;
         background-position: 15px;
         padding: 15px;
     }
 
-    button {
+    .reset {
         margin-top: 20px;
     }
 }
