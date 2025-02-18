@@ -38,9 +38,17 @@ botoesDesconto.forEach(button => {
             return;
         }
 
-        if (quantidade.value === "" || isNaN(quantidade.value)) {
+        if (quantidade.value === "" || !(quantidade.value)) {
           console.warn("Quantidade inválida ou vazia. Definindo como 1.");
-            quantidade.value = 1;
+            quantidade.value = 0;
+            estilizacaoinput.style.border = "2px solid #ff5263";
+            mensagem.textContent = "Can't be zero";
+        }
+        
+        else {
+          estilizacaoinput.style.border = "";
+          mensagem.textContent = "";
+    
         }
 
         console.log("Valor total:" , valorTotal.value);
@@ -81,6 +89,12 @@ personalizaCustom.addEventListener("blur", (e) => {
 
     }
 
+    else {
+      estilizacaoinput.style.border = "";
+      mensagem.textContent = "";
+
+    }
+
 
     calcularDesconto(parseFloat(valorTotal.value), customPercent, parseInt(quantidade.value));
 });
@@ -93,5 +107,7 @@ function resetEverything() {
   valorTotal.value = "";
   quantidade.value = "";
   personalizaCustom.value = "";
+  estilizacaoinput.style.border = "";
+  mensagem.textContent = "";
 }
 });
