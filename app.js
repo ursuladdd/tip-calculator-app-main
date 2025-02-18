@@ -1,6 +1,7 @@
+document.addEventListener("DOMContentLoaded", () => {
 let valorTotal = document.getElementById("int-valor");
 let quantidade = document.getElementById("int-quanti");
-let botoesDesconto = document.querySelectorAll(".select-tip button");
+let botoesDesconto = document.querySelectorAll(".btn-desc");
 let personalizaCustom = document.getElementById("int-custom");
 const resetButton = document.getElementById("reset");
 const tippersonOutput = document.getElementById('tip_person');
@@ -19,11 +20,16 @@ function calcularDesconto(valor, porcentagem, quantidade) {
     totalPersonOutput.textContent = `$${totalPorPessoa.toFixed(2)}`;
     tippersonOutput.textContent = `$${porPessoa.toFixed(2)}`;
 }
-
+console.log(botoesDesconto);
 botoesDesconto.forEach(button => {
     button.addEventListener("click", (e) => {
-        let tipValue = e.target.innerText;
-        tipValue = tipValue.slice(0, -1);
+      console.log("Botão clicado");
+      
+        let descValue = e.target.innerText;
+        console.log("Valor do botão (com %):", descValue);
+        
+        descValue = descValue.slice(0, -1);
+        console.log("Valor do desconto (sem %):", descValue);
 
         if (valorTotal.value === "") {
             console.error("Valor total não pode estar vazio!");
@@ -31,10 +37,24 @@ botoesDesconto.forEach(button => {
         }
 
         if (quantidade.value === "" || isNaN(quantidade.value)) {
+          console.warn("Quantidade inválida ou vazia. Definindo como 1.");
             quantidade.value = 1;
         }
 
-        calcularDesconto(parseFloat(valorTotal.value), parseFloat(tipValue), parseInt(quantidade.value));
+        console.log("Valor total:" , valorTotal.value);
+        console.log("Quantidade:", quantidade.value);
+        
+        const valorTotalNumerico = parseFloat(valorTotal.value);
+        const descValueNumerico = parseFloat(descValue);
+        const quantidadeNumerica = parseInt(quantidade.value);
+
+        console.log("Valores convertidos:", {
+            valorTotal: valorTotalNumerico,
+            desconto: descValueNumerico,
+            quantidade: quantidadeNumerica
+        });
+
+        calcularDesconto(parseFloat(valorTotal.value), parseFloat(descValue), parseInt(quantidade.value));
     });
 });
 
@@ -68,3 +88,4 @@ function resetEverything() {
   quantidade.value = "";
   personalizaCustom.value = "";
 }
+});
