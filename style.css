@@ -211,8 +211,14 @@ button {
     height: 35px;
     border-radius: 3px;
     font-family: var(--font);
+    background-color: #136055;
     font-weight: 600;
     font-size: 1rem;
+    cursor: pointer;
+}
+
+button:active {
+    background-color: var(--Strong-cyan);
 }
 
 
