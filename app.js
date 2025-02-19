@@ -34,7 +34,7 @@ botoesDesconto.forEach(button => {
         console.log("Valor do desconto (sem %):", descValue);
 
         if (valorTotal.value === "") {
-            console.error("Valor total não pode estar vazio!");
+            alert("(Português): Valor total não pode estar vazio!. (English): Total value cannot be empty!");
             return;
         }
 
@@ -44,7 +44,7 @@ botoesDesconto.forEach(button => {
             estilizacaoinput.style.border = "2px solid #ff5263";
             mensagem.textContent = "Can't be zero";
         }
-        
+
         else {
           estilizacaoinput.style.border = "";
           mensagem.textContent = "";
@@ -72,13 +72,13 @@ personalizaCustom.addEventListener("blur", (e) => {
     const customPercent = parseFloat(e.target.value);
 
     if (isNaN(customPercent)) {
-        alert("Por favor, insira um número válido para a porcentagem de gorjeta personalizada.");
+        alert("(Português): Por favor, insira um número válido para a porcentagem de gorjeta personalizada. (English): Please enter a valid number for the custom tip percentage.");
         e.target.value = "";
         return;
     }
 
     if (valorTotal.value === "") {
-        console.error("Valor total não pode estar vazio!");
+        alert("(Português): Valor total não pode estar vazio!. (English): Total value cannot be empty!");
         return;
     }
 
