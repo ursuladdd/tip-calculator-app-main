@@ -87,4 +87,8 @@
     .reset {
         margin-top: 20px;
     }
+
+    .attribution {
+        font-size: 0.7rem;
+    }
 }
